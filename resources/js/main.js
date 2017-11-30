@@ -68,5 +68,20 @@ $(document).ready( function() {
 		});
 	} )( jQuery );
 	
+	function setSkrollr(){
+		if($(window).width() > 1199) {
+			$(".logistics-img").attr('data-bottom-top', 'opacity:0; left:100%; top:100px;');
+			$(".logistics-img").attr('data-center-top','opacity:1; left:50%; top:20px;');
+	//		console.log($(".logistics-img").attr());
+			console.log($(".logistics-img").attr('data-bottom-top'));
+			console.log($(".logistics-img").attr('data-center-top'));
+	//		$(".logistics-img").attr("data-bottom-top") = ;
+		}
+	}
 	
+	// Set Skrollr atributes when document loads
+	setSkrollr();
+	// Event listener to change Skrollr attributes on resize
+	window.onresize = setSkrollr;
+	window.onresize = console.log("The screen is resizing");
 });
